@@ -684,6 +684,9 @@
 		2AFB5AE91D597ABB003895A7 /* DefaultSettings+Encodings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFB5AE71D597ABB003895A7 /* DefaultSettings+Encodings.swift */; };
 		2AFECF5A2171C0E60065A7DE /* Bundle+AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFECF592171C0E60065A7DE /* Bundle+AppInfo.swift */; };
 		2AFECF5B2171C0E60065A7DE /* Bundle+AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFECF592171C0E60065A7DE /* Bundle+AppInfo.swift */; };
+		3A61DC9821A7D3B800FC0E66 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61DC9721A7D3B800FC0E66 /* Net.swift */; };
+		3A61DC9A21A7DB7200FC0E66 /* PPURLConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61DC9921A7DB7200FC0E66 /* PPURLConvertible.swift */; };
+		3A7E64892197072400DE8C3B /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7E64882197072400DE8C3B /* KeyManager.swift */; };
 		6C6DAE3E13833C0E007F2326 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 6C6DAE3D13833C0E007F2326 /* dsa_pub.pem */; };
 /* End PBXBuildFile section */
 
@@ -1336,6 +1339,9 @@
 		2AFB30DE1E4B8F5B00BFAEF3 /* Debouncer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		2AFB5AE71D597ABB003895A7 /* DefaultSettings+Encodings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefaultSettings+Encodings.swift"; sourceTree = "<group>"; };
 		2AFECF592171C0E60065A7DE /* Bundle+AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+AppInfo.swift"; sourceTree = "<group>"; };
+		3A61DC9721A7D3B800FC0E66 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		3A61DC9921A7DB7200FC0E66 /* PPURLConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPURLConvertible.swift; sourceTree = "<group>"; };
+		3A7E64882197072400DE8C3B /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 		4B7998191A1F1BCD0088D167 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4B79981C1A1F1BCD0088D167 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "zh-Hans"; path = "zh-Hans.lproj/ReportTemplate.md"; sourceTree = "<group>"; };
 		57ED314A1FFD892600F16CAD /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Main.strings; sourceTree = "<group>"; };
@@ -1526,6 +1532,7 @@
 				2A3643E51E7C3D2400EA3CE8 /* ReplacementManager.swift */,
 				2AACB1DA1D19B1440073775B /* Key Binding Managers */,
 				2A8DA9431D286C53003D0C4B /* ScriptManager.swift */,
+				3A7E64882197072400DE8C3B /* KeyManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -1540,6 +1547,8 @@
 				2AFB30DE1E4B8F5B00BFAEF3 /* Debouncer.swift */,
 				2A38FAFC1D1C67050032231A /* DraggableArrayController.swift */,
 				2A41CB3A1C39068200F9122B /* Value Transformers */,
+				3A61DC9721A7D3B800FC0E66 /* Net.swift */,
+				3A61DC9921A7DB7200FC0E66 /* PPURLConvertible.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -3023,6 +3032,7 @@
 				2A78BFAD1D1B138D00A583D2 /* EditPaneController.swift in Sources */,
 				2A9BF3CB1D3842FA00E3D3E2 /* String+Normalization.swift in Sources */,
 				2A7725641D50401300A53C09 /* SyntaxStyleValidator.swift in Sources */,
+				3A7E64892197072400DE8C3B /* KeyManager.swift in Sources */,
 				2A0778612072040500876277 /* RegularExpressionSyntaxType.swift in Sources */,
 				2A6FD9DD1D392EFF00A59784 /* ATSTypesetter.swift in Sources */,
 				2AE12E001E7DDB1B00681F72 /* EditorTextView+SurroundSelection.swift in Sources */,
@@ -3071,6 +3081,7 @@
 				2ADD0AD8217A967200F78732 /* NSTextView+LineNumber.swift in Sources */,
 				2AAD61F01D2B0856008FE772 /* String+Range.swift in Sources */,
 				2AEAA8232096380C001A175C /* HighlightExtractors.swift in Sources */,
+				3A61DC9821A7D3B800FC0E66 /* Net.swift in Sources */,
 				2AA86282212ED91400BB75C9 /* NSSplitViewController+Autosave.swift in Sources */,
 				2A9082EC1D325BEC00228F50 /* UserDefaults.swift in Sources */,
 				2A5D13481D1FEF9900D38E6A /* FindPanelFieldViewController.swift in Sources */,
@@ -3133,6 +3144,7 @@
 				2ACDC0A31D173250009B72D6 /* SwitcherSegmentedCell.swift in Sources */,
 				2A5ADE841D2168FC00F6CE26 /* Collection.swift in Sources */,
 				2A685F6A2027729000A130A4 /* NSAppleEventManager+Additions.swift in Sources */,
+				3A61DC9A21A7DB7200FC0E66 /* PPURLConvertible.swift in Sources */,
 				2AEE84B21E8158D700BA7982 /* WriteToConsoleCommand.swift in Sources */,
 				2A3A19DF2068A76600516DE4 /* MultipleReplacement+TextView.swift in Sources */,
 				2A8DA9441D286C53003D0C4B /* ScriptManager.swift in Sources */,
@@ -4018,10 +4030,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CotEditor.entitlements;
-				DEVELOPMENT_TEAM = HT3Z3A72WZ;
+				DEVELOPMENT_TEAM = A9VAJDN54X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coteditor.CotEditor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shawn.CotEditor;
 				PRODUCT_NAME = CotEditor;
 			};
 			name = Debug;
@@ -4031,10 +4043,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CotEditor.entitlements;
-				DEVELOPMENT_TEAM = HT3Z3A72WZ;
+				DEVELOPMENT_TEAM = A9VAJDN54X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = com.coteditor.CotEditor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shawn.CotEditor;
 				PRODUCT_NAME = CotEditor;
 			};
 			name = Release;

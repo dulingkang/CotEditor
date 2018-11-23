@@ -45,7 +45,7 @@ final class GoToLineViewController: NSViewController {
         
         let string = self.textView.string
         let lineNumber = string.lineNumber(at: textView.selectedRange.location)
-        let lineCount = (string as NSString).substring(with: textView.selectedRange).numberOfLines
+      let lineCount = (string as NSString).substring(with: textView.selectedRange).numberOfLines
         
         self.location = String(lineNumber)
         if lineCount > 1 {

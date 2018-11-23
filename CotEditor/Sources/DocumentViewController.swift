@@ -374,7 +374,7 @@ final class DocumentViewController: NSSplitViewController, NSMenuItemValidation,
         
         for viewController in self.editorViewControllers {
             viewController.navigationBarController?.outlineProgress = nil
-            viewController.navigationBarController?.outlineItems = outlineItems
+//            viewController.navigationBarController?.outlineItems = outlineItems
             // -> The selection update will be done in the `otutlineItems`'s setter above, so you don't need invoke it (2008-05-16)
         }
     }
@@ -408,7 +408,7 @@ final class DocumentViewController: NSSplitViewController, NSMenuItemValidation,
         
         for viewController in self.editorViewControllers {
             viewController.apply(syntax: syntaxParser.style)
-            viewController.navigationBarController?.outlineItems = []
+//            viewController.navigationBarController?.outlineItems = []
             viewController.navigationBarController?.outlineProgress = nil
         }
         
@@ -788,7 +788,7 @@ final class DocumentViewController: NSSplitViewController, NSMenuItemValidation,
         let newEditorViewController = self.createEditorViewController(relativeTo: currentEditorViewController)
         self.setup(editorViewController: newEditorViewController, baseViewController: currentEditorViewController)
         
-        newEditorViewController.navigationBarController?.outlineItems = self.syntaxParser?.outlineItems ?? []
+//        newEditorViewController.navigationBarController?.outlineItems = self.syntaxParser?.outlineItems ?? []
         self.invalidateSyntaxHighlight()
         
         // adjust visible areas
