@@ -15,7 +15,7 @@ struct KeyEnum {
   static let shareKey = "shareKey"
   static let tokenKey = "tokenKey"
   static let tgtKey = "tgtKey"
-  static let priKey = "priKey"
+  static let secGKey = "secGKey"
 }
 
 final class KeyManager: NSObject {
@@ -73,13 +73,13 @@ final class KeyManager: NSObject {
       }
     }
   }
-  var priKey: String {
+  var secGKey: String {
     get {
-      return UserDefaults.standard.string(forKey: KeyEnum.priKey) ?? ""
+      return UserDefaults.standard.string(forKey: KeyEnum.secGKey) ?? ""
     }
     set {
       if !newValue.isEmpty {
-        UserDefaults.standard.set(newValue, forKey: KeyEnum.priKey)
+        UserDefaults.standard.set(newValue, forKey: KeyEnum.secGKey)
       }
     }
   }

@@ -154,7 +154,7 @@
                                     </textField>
                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6H5-Ux-yE7">
                                         <rect key="frame" x="450" y="0.0" width="150" height="29"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="private key" drawsBackground="YES" id="buZ-eY-Lyb">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="secGKey" drawsBackground="YES" id="buZ-eY-Lyb">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" red="0.078431372550000003" green="0.58039215690000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -261,10 +261,10 @@
                         <outlet property="outlineIndicator" destination="htM-ug-ofP" id="U7C-1C-d8L"/>
                         <outlet property="outlineLoadingMessage" destination="Svt-vI-TEc" id="GOz-wI-mIO"/>
                         <outlet property="outlineMenu" destination="uo6-wO-fJZ" id="E2p-BI-hLI"/>
-                        <outlet property="privateKeyField" destination="6H5-Ux-yE7" id="z8R-Jy-kjh"/>
                         <outlet property="qqNameTextField" destination="eTm-V8-00d" id="oJU-dQ-bRf"/>
                         <outlet property="qqPasswordTextField" destination="rhR-rC-wI7" id="GyV-m1-LwW"/>
                         <outlet property="rightButton" destination="MlW-Dz-FOk" id="rRE-Sr-4yx"/>
+                        <outlet property="secGField" destination="6H5-Ux-yE7" id="hD6-MA-R99"/>
                         <outlet property="shareKeyField" destination="QsM-H9-2ck" id="LQV-GM-s8R"/>
                         <outlet property="tgtKeyField" destination="3uD-UT-iaS" id="AIq-AZ-VuF"/>
                         <outlet property="tokenField" destination="UMN-r4-yOW" id="MhY-Uv-qt7"/>

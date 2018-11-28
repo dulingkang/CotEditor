@@ -35,7 +35,7 @@ final class NavigationBarController: NSViewController {
   
   @IBOutlet weak var tokenField: NSTextField!
   @IBOutlet weak var tgtKeyField: NSTextField!
-  @IBOutlet weak var privateKeyField: NSTextField!
+  @IBOutlet weak var secGField: NSTextField!
   
   /// observe textView
   var textView: NSTextView? {  // NSTextView cannot be weak
@@ -332,7 +332,7 @@ fileprivate extension NavigationBarController {
     shareKeyField.stringValue = KeyManager.shared.shareKey
     tokenField.stringValue = KeyManager.shared.token
     tgtKeyField.stringValue = KeyManager.shared.tgtKey
-    privateKeyField.stringValue = KeyManager.shared.priKey
+    secGField.stringValue = KeyManager.shared.secGKey
   }
     
   func saveKey() {
@@ -341,6 +341,6 @@ fileprivate extension NavigationBarController {
     KeyManager.shared.shareKey = shareKeyField.stringValue
     KeyManager.shared.token = tokenField.stringValue
     KeyManager.shared.tgtKey = tgtKeyField.stringValue
-    KeyManager.shared.priKey = privateKeyField.stringValue
+    KeyManager.shared.secGKey = secGField.stringValue
   }
 }

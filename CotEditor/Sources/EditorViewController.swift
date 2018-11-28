@@ -49,7 +49,12 @@ enum MenuTitle: String {
   }
 }
 
-
+enum rType: Int {
+  case all = 0
+  case tlv
+  case jce
+  case pb
+}
 
 final class EditorViewController: NSSplitViewController {
   
@@ -175,29 +180,18 @@ final class EditorViewController: NSSplitViewController {
 // MARK: action
 extension EditorViewController {
   @objc func unPackAll() {
-    guard let textView = self.textView else {
-      return
-    }
-    let rangeValue = textView.selectedRanges[0] as! NSRange
-    let range = textView.string.toRange(rangeValue)
-    let selectedString = String(textView.string[range!])
-    Net.post(Api.all.rawValue, params: ["sessionKey": KeyManager.shared.shareKey, "qq": "421629992", "text": selectedString]) { [weak self] model in
-      guard let strongSelf = self, let textView = strongSelf.textView else {
-        return
-      }
-      textView.insertText(model.msg, replacementRange: NSRange(location: textView.string.lengthOfBytes(using: .utf8), length: 0))
-    }
+    request(type: .all)
   }
   @objc func unPackJce() {
-    
+    request(type: .jce)
   }
   
   @objc func unPackTlv() {
-    
+    request(type: .tlv)
   }
   
   @objc func unPackPb() {
-    
+    request(type: .pb)
   }
   
   /// select previous outline menu item (bridge action from menu bar)
@@ -220,7 +214,6 @@ fileprivate extension EditorViewController {
     
     //增加item
     var item = createItem(title: MenuTitle.unPackAll.rawValue, action: MenuTitle.unPackAll.action())
-    print(MenuTitle.unPackAll.rawValue)
     menu.addItem(item)
     item = createItem(title: MenuTitle.unPackJce.rawValue, action: MenuTitle.unPackJce.action())
     menu.addItem(item)
@@ -236,5 +229,20 @@ fileprivate extension EditorViewController {
     item.isEnabled = true
     item.target = self
     return item
+  }
+  
+  func request(type: rType) {
+    guard let textView = self.textView else {
+      return
+    }
+    let rangeValue = textView.selectedRanges[0] as! NSRange
+    let range = textView.string.toRange(rangeValue)
+    let selectedString = String(textView.string[range!])
+    Net.post(Api.all.rawValue, params: ["sessionKey": KeyManager.shared.token, "qq": KeyManager.shared.name, "text": selectedString, "shareKey": KeyManager.shared.shareKey, "tgtKey": KeyManager.shared.tgtKey, "qqPass": KeyManager.shared.password, "secG": KeyManager.shared.secGKey, "rType": "\(type.rawValue)"]) { [weak self] model in
+      guard let strongSelf = self, let textView = strongSelf.textView else {
+        return
+      }
+      textView.insertText(model.msg, replacementRange: NSRange(location: textView.string.lengthOfBytes(using: .utf8), length: 0))
+    }
   }
 }
